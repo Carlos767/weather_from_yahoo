@@ -1,0 +1,14 @@
+<h1>Forecast Information</h1>
+
+<%=
+<p>The Current temperture for San Francisco, CA is: <%= @current_temp %> degrees </p>
+
+<div> 
+  <h3>The 5 day outlook is: </h3><br>
+  <% @five_day_forecast.each do |day| %>
+  Date: <%= day['day'] %>, <%= day['date'] %><br>
+  High: <%= day['high'] %><br>
+  Low: <%= day['low'] %><br>
+  Conditions: <%= day['text'] %><br>
+  <% end %>
+  </div>
